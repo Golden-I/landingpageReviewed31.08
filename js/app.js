@@ -20,17 +20,17 @@
 
 /**
  * Define Global Variables
- * 
+ * (resources: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/)
 */
-let navbarList = document.querySelector("#navbar__list");
-const sections = document.querySelectorAll("section");
+let navbarList = document.querySelector("#navbar__list"); /*https://www.w3schools.com/jsref/met_document_queryselectorall.asp****/
+const sections = document.querySelectorAll("section"); /*https://www.codegrepper.com/code-examples/javascript/queryselectorall+in+javascript***/
 
 
 /**
  * End Global Variables
  * Start Helper Functions
 */
-//check if an element is in viewport or not 
+//check if an element is in viewport or not (https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/#:~:text=Use%20the%20getBoundingClientRect()%20method%20to%20get%20the%20size%20of,in%20the%20viewport%20or%20not.)
 function isInViewport(elem) {
 	let distance = elem.getBoundingClientRect();
 
@@ -44,8 +44,12 @@ function isInViewport(elem) {
 	);
 };
 
-
     // remove active classes
+    //https://stackoverflow.com/questions/8379776/add-remove-active-class-from-a-navigation-link
+    //https://www.javatpoint.com/add-and-remove-the-active-class-from-a-navigation-link
+    // https://awik.io/check-if-element-is-inside-viewport-with-javascript/
+    // https://stackoverflow.com/questions/61585027/remove-class-from-all-elements-except-active-element
+
     function deactivateSections() {
         sections.forEach((element)=>{
             element.classList.remove("your-active-class", "active");
@@ -88,6 +92,8 @@ function activateNavLinks(currentSectionId) {
 }
 
 // Scroll to anchor ID using scrollTO event
+//https://blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
+
 function scrollToSectionOnClick() {
     let navbarAnchors = document.querySelectorAll(".nav__hyperlink");
     navbarAnchors.forEach((element) => {
@@ -108,6 +114,8 @@ function scrollToSectionOnClick() {
 */
 
 // Build menu 
+//https://itnext.io/build-a-single-page-web-app-javascript-and-the-dom-90c99b08f8a9
+
 function buildNavbar() {
 	sections.forEach((element)=>{
 	    let listItem = document.createElement("li");
@@ -120,6 +128,8 @@ function buildNavbar() {
 }
 
 // Scroll to section on link click
+//https://blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
+
 scrollToSectionOnClick();
 
 // Set sections as active
@@ -141,6 +151,7 @@ window.addEventListener('scroll', function (event) {
 });
 
 // scrollup
+https://blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
 const scrollUp = document.querySelector("#scroll-up");
 
 scrollUp.addEventListener("click", () => {
@@ -152,6 +163,10 @@ scrollUp.addEventListener("click", () => {
 });
 
 // contactForm 
+//const form  = document.getElementById('contactForm');
+//https://stackoverflow.com/questions/6799533/how-to-submit-a-form-with-javascript-by-clicking-a-link
+//https://blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
+// this is the link I used for this code: https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript
 const form  = document.getElementById('contactForm');
 
 form.addEventListener('submit', () => {
