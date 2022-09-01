@@ -72,6 +72,7 @@ function isInViewport(elem) {
 // build the nav
 window.addEventListener('load', buildNavbar())
 
+// https://stackoverflow.com/questions/39446702/how-to-highlight-active-element-using-javascript
 // Add class 'active' to section when near top of viewport
 
 function activateCurrentSection(currentSection) {
@@ -93,7 +94,6 @@ function activateNavLinks(currentSectionId) {
 
 // Scroll to anchor ID using scrollTO event
 //https://blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
-
 function scrollToSectionOnClick() {
     let navbarAnchors = document.querySelectorAll(".nav__hyperlink");
     navbarAnchors.forEach((element) => {
