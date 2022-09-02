@@ -151,8 +151,8 @@ window.addEventListener('scroll', function(event) {
 });
 
 // scroll-up
-https: //blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
-    const scrollUp = document.querySelector("#scroll-up");
+///https: //blog.magezon.com/how-to-make-a-good-landing-page-in-html-ecm/#h-making-the-scroll-to-top-button
+const scrollUp = document.querySelector("#scroll-up");
 
 scrollUp.addEventListener("click", () => {
     window.scrollTo({
